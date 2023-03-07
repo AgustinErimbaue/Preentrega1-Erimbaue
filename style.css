@@ -1,0 +1,147 @@
+nav {
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  li {
+    margin: 0 10px;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+  }
+  
+  a:hover {
+    background-color: #555;
+  }
+
+  /* Styles for the banner section */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background-color: #f8f8f8;
+  }
+  
+  .banner img {
+    width: 50%;
+    height: auto;
+  }
+  
+  .banner-text {
+    text-align: center;
+  }
+  
+  .banner-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .banner-text p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Styles for the phone list section */
+  .phone-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 4rem 0;
+  }
+  
+  .phone-card {
+    width: 30%;
+    margin: 2%;
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .phone-card img {
+    width: 70%;
+    height: auto;
+  }
+  
+  .phone-card h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .phone-card p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Styles for the plan list section */
+  .plan-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 4rem 0;
+  }
+  
+  .plan-card {
+    width: 30%;
+    margin: 2%;
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .plan-card h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .plan-card p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Styles for the testimonial section */
+  .testimonial-section {
+    text-align: center;
+    margin: 4rem 0;
+  }
+  
+  .testimonial-card {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .testimonial-card img {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial-card p {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .testimonial-card h4 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
