@@ -6,68 +6,86 @@ let precioMovil = 12
 let resultado = sumar(precioMovil, precioWifi)
 
 function sumar(a, b) {
-    return a + b;
+  return a + b;
 }
 
 while (intentos < intentosMaximos) {
-    usuario = prompt(`ingrese su usuario`)
-    const contraseña = parseInt(prompt(`Ingrese su contraseña`));
+  usuario = prompt(`ingrese su usuario`)
+  const contraseña = parseInt(prompt(`Ingrese su contraseña`));
 
-    if (usuario === `Admin` && contraseña === 123) {
-        alert(`Bienvenido`)
-        break;
-    } else {
-        alert(`Usuario o Contraseña incorrectos`);
-        intentos++
-    }
+  if (usuario === `Admin` && contraseña === 123) {
+    alert(`Bienvenido`)
+    break;
+  } else {
+    alert(`Usuario o Contraseña incorrectos`);
+    intentos++
+  }
 }
 
 if (intentos === intentosMaximos) {
-    alert(`Ha superado el limite de intentos`);
+  alert(`Ha superado el limite de intentos`);
 } else {
-    if (usuario === `Admin`) {
-        const nombre = prompt(`Ingrese su nombre`);
-        switch (nombre) {
-            case `Agustin`:
-                alert(`Bienvenido Agustin, que deseas contratar`);
-                break;
+  if (usuario === `Admin`) {
+    const nombre = prompt(`Ingrese su nombre`);
+    switch (nombre) {
+      case `Agustin`:
+        alert(`Bienvenido Agustin, que deseas contratar`);
+        break;
 
-            case `Florencia`:
-                alert(`Bienvenida Florencia, que deseas contratar`);
-                break;
+      case `Florencia`:
+        alert(`Bienvenida Florencia, que deseas contratar`);
+        break;
 
-            case `Juan`:
-                alert(`Bienvenido Juan, que deseas contratar`);
-                break;
+      case `Juan`:
+        alert(`Bienvenido Juan, que deseas contratar`);
+        break;
 
-            default:
-                alert(`Bienvenido/a ${nombre}, que desea contratar`)
-        }
+      default:
+        alert(`Bienvenido/a ${nombre}, que desea contratar`)
     }
+  }
 }
 
 
 
 let producto = prompt(`Ingrese lo que desea contratar para recibir informacion`);
 
-if (producto === `wifi`) {
+while (producto != `movil`, `wifi`, `wifi y movil`) {
+  if (producto === `wifi`) {
     alert(`El precio es ${precioWifi}`)
-} else if (producto === `movil`) {
-    alert(`El precio es ${precioMovil}`)
-} else if (producto === `wifi y movil`) {
+    break;
+  } else if (producto === `movil`) {
+    alert(`El precio es ${precioMovil}`);
+    break;
+  } else if (producto === `wifi y movil`) {
     alert(`El precio total es ${resultado}`)
-} else {
-    alert(`gracias por visitarnos`)
+    break;
+  } else {
+    alert(`respuesta no valida`)
+  }
+  producto = prompt(`Ingrese lo que desea contratar para recibir informacion`);
 }
 
-let pregunta = prompt(`desea comprar un movil?`);
+
+function mostrarCarrito() {
+  const carritoDiv = document.getElementById('carrito');
+  let carritoHTML = '<ul>';
+
+  carrito.forEach((item) => {
+    carritoHTML += `<li>${item.nombre} - Precio: ${item.precio}</li>`;
+  });
+
+  carritoHTML += '</ul>';
+
+  carritoDiv.innerHTML = carritoHTML;
+}
 
 class Movil {
-    constructor(nombre, modelo, precio) {
-        this.nombre = nombre
-        this.modelo = modelo
-        this.precio = precio
-    }
+  constructor(nombre, modelo, precio) {
+    this.nombre = nombre;
+    this.modelo = modelo;
+    this.precio = precio;
+  }
 }
 
 const movil1 = new Movil(`Samsung`, `s22`, 250);
@@ -75,50 +93,105 @@ const movil2 = new Movil(`Iphone`, `14plus`, 350);
 const movil3 = new Movil(`Motorola`, `Edge 30 ultra`, 200);
 
 class Accesorio {
-    constructor(nombre, precio) {
-        this.nombre = nombre
-        this.precio = precio
-    }
+  constructor(nombre, precio) {
+    this.nombre = nombre;
+    this.precio = precio;
+  }
 }
 
 const cascos = new Accesorio(`Cascos Sony`, 12);
+
 const cargador = new Accesorio(`Cargador rápido`, 25);
 
-if (pregunta === `si`) {
-    console.log(movil1, movil2, movil3, cascos, cargador);
-} else {
-    alert(`gracias por visitarnos`);
-}
+let pregunta = prompt(`¿Deseas agregar un móvil o accesorios al carrito?`);
 
 const carrito = [];
 
-let dispositivo = "";
+while (pregunta !== `esc`) {
+  switch (pregunta) {
+    case `movil`:
+      const movilesHTML = `
+      <ul>
+        <li>${movil1.nombre} ${movil1.modelo} - ${movil1.precio}€</li>
+        <li>${movil2.nombre} ${movil2.modelo} - ${movil2.precio}€</li>
+        <li>${movil3.nombre} ${movil3.modelo} - ${movil3.precio}€</li>
+      </ul>
+    `;
+    document.getElementById("telefonos").innerHTML = movilesHTML;
 
-dispositivo = prompt(`Ingrese dispositivo`);
+      let dispositivo = prompt(`Ingrese dispositivo`);
 
-while (dispositivo !== `ninguno`) {
-    if (dispositivo === `Samsung`) {
-        carrito.push(movil1);
-        console.log(carrito);
+      while (dispositivo !== `Esc`) {
+        if (dispositivo === `Samsung`) {
+          carrito.push(movil1);
+          console.log(carrito);
+          break;
+        } else if (dispositivo === `Iphone`) {
+          carrito.push(movil2);
+          console.log(carrito);
+          break;
+        } else if (dispositivo === `Motorola`) {
+          carrito.push(movil3);
+          console.log(carrito);
+          break;
+        } else {
+          alert(`No agregaste nada al carrito`);
+        }
+        dispositivo = prompt(`Ingrese dispositivo`);
+      }
+
+       let array = prompt(`¿Quieres ver el carrito?`);
+
+      if (array === `si`) {
+        mostrarCarrito();
         break;
-    } else if (dispositivo === `Iphone`){
-        carrito.push(movil2);
-        console.log(carrito);
-        break;
-    } else if (dispositivo === `Motorola`) {
-        carrito.push(movil3)
-        console.log(carrito);
-        break;
-    }else{
-        alert(`No agregaste nada al carrito`);
-    }
-    dispositivo = prompt(`ingrese dispositivo`)
-    }
+      } else {
+        alert(`Haz click en "comprar" para terminar la operación.`);
+      }
+      break;
 
-let array = prompt(`Quieres ver el carrito?`)
+    case `accesorios`:
+      const accesorioHTML = `
+              <ul>
+                <li>${cascos.nombre} - ${movil1.precio}€</li>
+                <li>${cargador.nombre} - ${movil2.precio}€</li>
+              </ul>
+            `;
+            document.getElementById("extras").innerHTML = accesorioHTML;
+            
+      let accesorios = prompt(`Ingrese accesorios`)
+      while (accesorios !== `ninguno`) {
+        if (accesorios === `cascos`) {
+          carrito.push(cascos);
+          console.log(carrito);
+          break;
+        } else if (accesorios === `cargador`) {
+          carrito.push(cargador);
+          console.log(carrito);
+          break;
+        } else {
+          alert(`No agregaste nada al carrito`);
+        }
+        accesorios = prompt(`Ingrese accesorio`);
+      }
 
-if( array === `si`){
-    carrito.forEach( carro => alert(JSON.stringify(carro)))
-}else{
-    alert(`haca click en comprar para terminar la operacion`)
+      let array2 = prompt(`¿Quieres ver el carrito?`);
+
+      if (array2 === `si`) {
+        mostrarCarrito();
+        break;
+      } else {
+        alert(`Haz click en "comprar" para terminar la operación.`);
+      }
+      break;
+
+    default:
+      alert(`Gracias por elegirnos`);
+      break;
+  }
+
+  pregunta = prompt(`¿Deseas agregar un móvil o accesorios al carrito?`);
+  break;
 }
+
+localStorage.setItem(`carrito`, JSON.stringify(carrito));
