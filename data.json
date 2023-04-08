@@ -1,0 +1,31 @@
+{
+  "empresa": "Telefonía Móvil S.A.",
+  "página_web": "https://www.telefonia-movil.com",
+  "reseñas": [
+      {
+          "usuario": "JuanPerez",
+          "puntuacion": 5,
+          "comentario": "Excelente página para comprar móviles y contratar servicios. Los precios son competitivos y el servicio al cliente es muy bueno."
+      },
+      {
+          "usuario": "MariaGarcia",
+          "puntuacion": 4,
+          "comentario": "Buenas ofertas en móviles, pero el proceso de contratación de servicios podría ser más sencillo."
+      },
+      {
+          "usuario": "PedroRuiz",
+          "puntuacion": 2,
+          "comentario": "No recomendaría esta página a nadie. Los precios son engañosos y el servicio al cliente es pésimo."
+      },
+      {
+          "usuario": "AnaMartinez",
+          "puntuacion": 3,
+          "comentario": "La página es fácil de navegar, pero los precios no son muy competitivos en comparación con otras páginas similares."
+      },
+      {
+          "usuario": "LuisGonzalez",
+          "puntuacion": 5,
+          "comentario": "Excelente servicio al cliente. Me ayudaron a resolver un problema con mi contrato de manera rápida y eficiente."
+      }
+  ]
+}

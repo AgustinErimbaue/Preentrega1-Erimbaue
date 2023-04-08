@@ -1,101 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="navbar-container">
-          <a href="/" class="navbar-logo">
-            <img src="logo.png" alt="Simulador telefonia celular" />
-          </a>
-          <nav>
-            <ul>
-              <li><a href="#">Inicio</a></li>
-              <li><a href="/pages/productos.html">Productos</a></li>
-              <li><a href="/pages/servicios.html">Servicios</a></li>
-              <li><a href="/pages/carrito.html">carrito</a></li>
-              <li><a href="#">Contacto</a></li>
-            </ul>
-          </nav>
-          <div class="navbar-right">
-            <a href="#" class="navbar-link">Mi cuenta</a>
-            <button class="navbar-button">Comprar</button>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <body>
-        <section class="banner">
-          <img src="ruta-del-banner.png" alt="Imagen del banner">
-          <div class="banner-text">
-            <h1>Bienvenido a nuestra tienda de teléfonos móviles</h1>
-            <p>Encuentra los mejores teléfonos móviles y planes para ti</p>
-            <a href="#" class="button">Ver más</a>
-          </div>
-        </section>
-      
-        <section class="phone-list">
-          <h2>Teléfonos más vendidos</h2>
-          <div class="phone-card">
-            <img src="ruta-del-telefono.png" alt="Imagen del teléfono">
-            <h3>Nombre del teléfono</h3>
-            <p>Precio: $X</p>
-            <a href="#" class="button">Comprar ahora</a>
-          </div>
-          <div class="phone-card">
-            <img src="ruta-del-telefono.png" alt="Imagen del teléfono">
-            <h3>Nombre del teléfono</h3>
-            <p>Precio: $X</p>
-            <a href="#" class="button">Comprar ahora</a>
-          </div>
-          <div class="phone-card">
-            <img src="ruta-del-telefono.png" alt="Imagen del teléfono">
-            <h3>Nombre del teléfono</h3>
-            <p>Precio: $X</p>
-            <a href="#" class="button">Comprar ahora</a>
-          </div>
-        </section>
-      
-        <section class="plan-list">
-          <h2>Planes más populares</h2>
-          <div class="plan-card">
-            <h3>Nombre del plan</h3>
-            <p>Descripción del plan</p>
-            <p>Precio: $X/mes</p>
-            <a href="#" class="button">Comprar ahora</a>
-          </div>
-          <div class="plan-card">
-            <h3>Nombre del plan</h3>
-            <p>Descripción del plan</p>
-            <p>Precio: $X/mes</p>
-            <a href="#" class="button">Comprar ahora</a>
-          </div>
-          <div class="plan-card">
-            <h3>Nombre del plan</h3>
-            <p>Descripción del plan</p>
-            <p>Precio: $X/mes</p>
-            <a href="#" class="button">Comprar ahora</a>
-          </div>
-        </section>
-      
-        <section class="testimonial-section">
-          <h2>Testimonios de nuestros clientes</h2>
-          <div class="testimonial-card">
-            <img src="ruta-de-la-foto-del-cliente.png" alt="Foto del cliente">
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-            <h4>Nombre del cliente</h4>
-          </div>
-          <div class="testimonial-card">
-            <img src="ruta-de-la-foto-del-cliente.png" alt="Foto del cliente">
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/" class="navbar-logo">
+          <img src="logo.png" alt="Simulador telefonia celular" />
+        </a>
+        <nav>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="/pages/productos.html">Productos</a></li>
+            <li><a href="/pages/servicios.html">Servicios</a></li>
+            <li><a href="/pages/carrito.html">carrito</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="navbar-right">
+
+          <button id="navbar-button">Mi cuenta</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <body>
+    <section class="banner">
+      <img src="ruta-del-banner.png" alt="Imagen del banner">
+      <div class="banner-text">
+        <h1>Bienvenido a nuestra tienda de teléfonos móviles</h1>
+        <p>Encuentra los mejores teléfonos móviles y planes para ti</p>
+        <a href="#" class="button">Ver más</a>
+      </div>
+    </section>
+
+    <section class="phone-list">
+      <h2>Teléfonos más vendidos</h2>
+      <div class="phone-card">
+        <img src="/img/motorola.jpg" alt="Motorola Edge 30 ultra">
+        <h3>Motorola Edge 30 ultra</h3>
+        <p>Precio: $200</p>
+        <button id="btnMoto">Agregar al carrito</button>
+      </div>
+      <div class="phone-card">
+        <img src="/img/iphone.jpg" alt="Iphone 14 plus">
+        <h3>Iphone 14 plus</h3>
+        <p>Precio: $350</p>
+        <button id="btnIphone">Agregar al carrito</button>
+      </div>
+      <div class="phone-card">
+        <img src="/img/00157063603864009_6__640x640.webp" alt="S22 ultra">
+        <h3>S22 ultra</h3>
+        <p>Precio: $250</p>
+        <button id="btnSamsung">Agregar al carrito</button>
+      </div>
+    </section>
+
+    <section class="plan-list">
+      <h2>Planes más populares</h2>
+      <div class="plan-card">
+        <h3>600mb</h3>
+        <p>fibra de 600mb simetricos</p>
+        <p>Precio: $29/mes</p>
+        <button id="600mb">Agregar al carrito</button>
+      </div>
+      <div class="plan-card">
+        <h3>gb ilim</h3>
+        <p>Llamadas ilim ygb ilim</p>
+        <p>Precio: $12/mes</p>
+        <button id="movilIlimitado">Agregar al carrito</button>
+      </div>
+      <div class="plan-card">
+        <h3>1gb +llamads ilimitadas</h3>
+        <p>1gb, llam ilim y gb ilim</p>
+        <p>Precio: $41/mes</p>
+        <button id="wifiYmovil">Agregar al carrito</button>
+      </div>
+    </section>
+
+    <table id="tabla-carrito">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="carrito-table"></tbody>
+      <tfoot>
+        <tr>
+          <td>Total:</td>
+          <td id="total-carrito">$0.00</td>
+          <td>
+            <button id="comprar-todo">Comprar todo</button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <section id="testimonial-section">
+     
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="main.js"></script>
   </body>
+
 </html>
